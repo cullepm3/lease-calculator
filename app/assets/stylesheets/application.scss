@@ -1,0 +1,16 @@
+/*
+ * Project uses bootstrap-sass gem.  bootstrap-sass (3.3.5.1)
+ *  
+ * 
+ * Don't add css to this file, use app.scss.
+ *
+ * Do not use *= require in Sass or your other stylesheets will not be able 
+ * to access the Bootstrap mixins or variables.
+*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "app";
+@import "pages/*";
+
+

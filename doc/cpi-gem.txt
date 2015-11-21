@@ -1,0 +1,18 @@
+cpi-gem - bls maybe better, but do most people care? probably use python anyway
+  - we mirror the data in git
+  - nice because you can see diffs of changes to files
+  - need a versioning scheme
+  - it would be nice for gem to use more current data if its compatible
+    - would need database tables for files...
+
+  cpi-data gem
+    - periodically check http://download.bls.gov/pub/time.series/ (daily?)
+    - could you mirror
+    - includes gem api compatibility info
+    - 
+  cpi-client gem -
+
+
+
+data-gov has some info also...
+  http://catalog.data.gov/dataset?q=consumer+price+index&sort=score+desc%2C+name+asc

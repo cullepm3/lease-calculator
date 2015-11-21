@@ -1,0 +1,67 @@
+// Place all the styles related to the leases controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.leases {
+
+  th, td {
+    padding:5px;
+  }
+
+  td {
+    text-align:right;
+    font: 12px "Calibri", san-serif;
+  }
+
+  #rent {
+    width: 100px;
+  }
+
+  #term {
+    width: 50px;
+  }
+
+  #rate {
+    width: 60px;
+  }
+
+  #period {
+    width: 50px;
+  }
+
+  #fixed-period {
+    width: 50px;
+  }
+
+  #increase-amount {
+    width: 100px;
+  }
+
+  #lower-bound, #upper-bound {
+    width: 50px;
+  }
+
+  .row {
+    /*outline: 1px solid green;*/
+  }
+
+  .subrow {
+    margin: 10px;
+  }
+
+  .container {
+    /*outline: 1px solid red;*/ 
+  }
+
+  /* bootstrap ignores form-inline for screens smaller than 768, so we override */
+    .form-inline input {
+    display: inline-block;
+  }
+
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+}

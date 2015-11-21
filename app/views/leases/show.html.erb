@@ -1,0 +1,140 @@
+<p id="notice"><%= notice %></p>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <p>Experiment with forms, inline, horizontal, standard, diff col sizes</p>
+    <p>Make this look like an old timey legal document, whereas with flourishy w</p>
+    <p>try php haml - https://code.google.com/p/phamlp/wiki/HelperMethods</p>
+    <p>nice regex site: http://www.regular-expressions.info/anchors.html</p>
+    <p>commas http://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript</p>
+    <p>Checkout the built with bootstrap sites: http://expo.getbootstrap.com/</p>
+    <p>Maybe this should be built with ratchet? http://blog.teamtreehouse.com/beginners-guide-ratchet-mobile-web-app-framework</p>
+  </div>
+
+
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Lease Terms</h2>
+      <form id="calculator" role="form" class="form-inline">
+        <div class="subrow">
+          <span>$<span>
+          <div class="form-group">
+            <input id="rent" type="text" placeholder="Monthly Rent" class="form-control" value="6000">
+          </div>
+          <span>a month for </span>
+          <div class="form-group">
+            <input id="term" type="text" placeholder="Years" class="form-control" value="20">
+          </div> years.
+
+        </div> <!--row -->
+        <div class="subrow">
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="increaseType" id="fixed-option" value="fixed-amount" checked>
+
+              <div class="form-group">
+                &nbsp;$&nbsp;
+                <input id="increase-amount" type="text" placeholder="$1000" class="form-control" value="1000">
+              </div>
+
+              <span> fixed increase every <span>
+              <div class="form-group">
+                <input id="fixed-period" type="text" placeholder="" class="form-control" value="1">
+              </div>
+              <span>year(s) <span>
+            </label>
+          </div>
+        </div> <!--row -->
+
+        <div class="subrow">
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="increaseType" id="fixed-percentage-option" value="fixed-percentage" checked>
+
+              <div class="form-group">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="rate" type="text" placeholder="% Annual Rent Increase" class="form-control" value="3">
+              </div>
+
+              <span>% increase every <span>
+              <div class="form-group">
+                <input id="period" type="text" placeholder="" class="form-control" value="1">
+              </div>
+              <span>year(s) <span>
+            </label>
+          </div>
+        </div> <!--row -->
+
+        <div class="subrow">
+          <div class="radio">
+            <label>
+              <input type="radio" name="increaseType" id="cpi-option" value="cpi" checked>
+
+              &nbsp;Use CPI starting in
+              <div class="form-group">
+                <select id="cpiYear" class="form-control">
+                  <option>1913</option>
+                </select>
+              </div>
+
+              <span>apply increases every <span>
+              <div class="form-group">
+                <input id="period" type="text" placeholder="" class="form-control" value="1">
+              </div>
+              <span>year(s) <span>
+            </label>
+            <br>
+            &nbsp;&nbsp;
+            <input type="checkbox" name="lower-bound-enabled" id="lower-bound-enabled">
+              CPI never less than
+              <input type="input" name="lower-bound" id="lower-bound" class="form-control"value="3">
+            <br>
+            &nbsp;&nbsp;
+            <input type="checkbox" name="upper-bound-enabled" id="upper-bound-enabled">
+              CPI never more than
+              <input type="input" name="upper-bound" id="upper-bound" class="form-control" value="6">
+            <br>
+
+          </div>
+        </div> <!--row -->
+        <div class="subrow">
+          <p><a id="calculate" class="btn btn-default" href="#" role="button">Calculate</a></p>
+        </div> <!--row -->
+      </form>
+
+
+    </div>
+    <div class="col-md-6">
+      <h2>Annual Rent</h2>
+      <table>
+        <thead>
+          <th>Year</th>
+          <th>% Increase</th>
+          <th>Increase</th>
+          <th>Annual Rent</th>
+          <th>Present Value</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Blah</td>
+            <td>Di Blah</td>
+          </tr>
+        </tbody>
+      </table>
+   </div>
+  </div>
+
+  <hr>
+
+
+
+  <footer>
+    <p>&copy; Company 2014</p>
+  </footer>

@@ -1,0 +1,22 @@
+U.S. All items, 1982-84=100 - CUUR0000SA0
+U.S. All Items, 1967=100 - CUUR0000AA0
+U.S. All Items Less Food and Energy - CUUR0000SA0L1E
+U.S. Food and Beverages - CUUR0000SAF
+U.S. Housing, 1982-84=100 - CUUR0000SAH
+U.S. Apparel, 1982-84=100 - CUUR0000SAA
+U.S. Transportation, 1982-84=100 - CUUR0000SAT
+U.S. Medical Care, 1982-84=100 - CUUR0000SAM
+U.S. Medical Care Services, 1982-84=100 - CUUR0000SAM2
+U.S. Recreation, 1982-84=100 - CUUR0000SAR
+U.S. Education and Communication, 1982-84=100 - CUUR0000SAE
+U.S. Other Goods and Services, 1982-84=100 - CUUR0000SAG
+New York All Items, 1982-84=100 - CUURA101SA0
+Philadelphia All Items, 1982-84=100 - CUURA102SA0
+Chicago All Items, 1982-1984=100 - CUURA207SA0
+Washington-Baltimore All Items, November 1996=100 - CUURA311SA0
+Los Angeles All Items, 1982-1984=100 - CUURA421SA0
+San Francisco All Items, 1982-1984=100 - CUURA422SA0
+Northeast Region All Items, 1982-1984=100 - CUUR0100SA0
+Midwest Region All Items, 1982-1984=100 - CUUR0200SA0
+South Region All Items, 1982-1984=100 - CUUR0300SA0
+West Region All Items, 1982-1984=100 - CUUR0400SA0

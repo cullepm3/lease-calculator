@@ -1,0 +1,18 @@
+- add lease javascript
+- add jasmine testing
+- add user sign in
+  - try from memory
+- add state saving capabilities (necessary?)
+  - maybe we just make the url bookmarkable?
+- figure out how to move sprintf to vendor
+- permalink functionality
+  - for standalone leases
+
+- pull the cpi data directly and cache
+  http://www.bls.gov/developers/home.htm
+
+  or pull the database? http://download.bls.gov/pub/time.series/cu/cu.txt
+    http://download.bls.gov/pub/time.series/cu/cu.data.2.Summaries
+
+- handle partial years
+- add support for selecting the month

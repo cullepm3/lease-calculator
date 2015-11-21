@@ -1,0 +1,109 @@
+/*-----------------------------------------------------------------------------
+  Uses the Garber-Irish technique for scoping javascript to specific pages.
+
+  == SITEWIDE JS ==
+
+  JS that needs to run on every page should be added to this file, in:
+
+    APP.init.common
+
+  This function runs in $(document).ready scope.  Site wide JS that
+  needs to run earlier should be placed FIXME.
+
+  == PAGE SPECIFIC JS ==
+
+  JS that only runs on specific pages should be added to a js file
+  corresponding to that pages controller eg:
+
+    pages/controller_name.js
+
+  Code that runs for every controller action should be added to:
+
+    APP.pages.controller_name.init.
+
+  Code that runs for a specific action should be placed in
+
+    APP.pages.controller_name.action
+
+  These methods all run in $(document).ready scope.
+
+  == COMPONENT JS ==
+
+  JS that is used in components across multiple pages should be added
+  to a corresponding components/component.js file.  To enable on pages
+  add a target FIXME
+
+  == JSON ==
+
+  If a page needs access to model or other data, create a jbuilder file and render it
+  into a data-tag on an appropriate element.
+
+  == NOTES ==
+
+  Avoid using inline javascript tags.
+
+-----------------------------------------------------------------------------*/
+
+APP = {
+  common: {
+    init: function() {
+      $.ajaxSetup({ cache: false });
+
+      <% if Rails.env.development? %>
+        if ($('title').text() === "App") {
+          console.log("page title missing");
+        }
+      <% end %>
+    },
+  },
+  components: {},
+
+};
+
+ROUTER = {
+  exec: function( controller, action ) {
+    var ns = APP,
+        action = ( action === undefined ) ? "init" : action;
+
+    if ( controller !== "" && ns[controller] && typeof ns[controller][action] == "function" ) {
+      ns[controller][action]();
+    }
+  },
+
+  init: function() {
+    var body = document.body,
+        //FIXME - can we poly fill classList for IE 8,9
+        controller = body.classList[0],
+        action = body.classList[1]
+
+    ROUTER.exec( "common" );
+
+    //console.log(controller + " " + action)
+    // FIXME - does this work as expected?
+    //       - this gist only inits if enabled on page
+    //       - https://gist.github.com/liamr/5611434
+    for (var component in APP.components) {
+      APP.components[component].init();
+    }
+
+    ROUTER.exec( controller );
+    ROUTER.exec( controller, action );
+  }
+};
+
+// INIT
+
+$( document ).ready( ROUTER.init );
+
+
+function currentUser() {
+  return $('[data-user]').data('user');
+}
+
+function setCurrentUser(user) {
+  $('[data-user]').data('user', user);
+}
+
+function resetCurrentUser() {
+    $('[data-user]').data('user', '');
+}
